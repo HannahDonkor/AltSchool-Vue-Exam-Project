@@ -1,8 +1,10 @@
 <template>
   <div class="content">
+    <div class="wrapper">
     <div class="repositories">
       <div class="repository">
-        <p>{{repo.name}}</p>
+        <h2>{{repo.name}}</h2>
+        </div>
         <div class="card">
           <ul>
             <li>created at: {{repo.created_at}}</li>
@@ -11,10 +13,12 @@
           </ul>
           <a :href="repo.html_url" target="blank"><button class="git_btn">link to Github repo</button></a>
         </div>
-      </div>
+      
       
     </div>
+    </div>
   </div>
+
   
 </template>
 
@@ -61,8 +65,12 @@ export default {
   height: 100%;
   margin: 0 auto;
   text-align: center;
-  background-color: rgb(174, 170, 170);
-  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to right, var(--cyan-main), var(--blue));
+  background-attachment: fixed;
+  /* overflow-y: hidden; */
+  -webkit-tap-highlight-color: transparent;
 } 
 
 .repository li {
@@ -71,41 +79,61 @@ export default {
 } 
 
 .repositories {
-  width: 40%;
-  height: 30%;
-  /* position: relative; */
-  top: 50px;
-  left: 50px;
+  max-width: 30rem;
+  width: 50%;
+  height: fit-content;
   border-radius: 10px; 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  margin: 50px 0 0 100px;
-  background-color: white;
-  /* display: grid; */
-  transform-origin: 100% 0; 
-  /* margin: 1rem; */
+  display: flex;
+  flex-direction: column;
+  background-color: var(--white-alpha-25);
+  border: 1px solid var(--white-alpha-40);
+  backdrop-filter: var(--backdrop-filter-blur);
+ 
 } 
 
 .repository {
-  width: calc(80% + 80px);
+  width: 100%;
   height: 50px;
   line-height: 25px;
-  padding: 2% 5% 0 5%;
-  box-sizing: border-box;
+  padding: 5px;
+  display: flex;
+  border: 2px solid var(--white-alpha-40);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: var(--white-alpha-25); */
   color: rgb(25, 27, 30);
-  /* text-align: justify; */
-  /* margin: 0; */
-  /* z-index: 20; */
+  
 } 
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
 .repository h2 {
-  margin-bottom: 15px;
+  word-break: break-all;
+  text-transform: capitalize;
+  font-size: 15px;
 } 
 
-.repository p {
-  margin-bottom: 10px;
-  font-weight: bold;
-  text-transform: capitalize;
-} 
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  padding: 10px 0;
+  gap: 0.5rem;
+}
+
+.card li {
+  list-style-type: none;
+  text-transform: capitalize;  
+}
+
 
 .git_btn {
   background-color: gray;
@@ -115,7 +143,6 @@ export default {
   margin-top: 10px;
   padding: 6px 12px;
   cursor: pointer;
-
 } 
 
 .git_btn:hover {
@@ -123,5 +150,12 @@ export default {
     color: black;
 } 
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-evenly;
+} 
 
 </style>

@@ -148,7 +148,6 @@ export default {
   display: flex;
   flex-direction: column;
 
-
 } 
 
 .card_content {

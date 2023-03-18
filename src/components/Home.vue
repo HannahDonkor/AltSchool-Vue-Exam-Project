@@ -49,7 +49,8 @@ export default {
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem 5rem 1rem 6rem;
+    /* border: 2px solid red; */
 }
 
 nav img {
@@ -135,16 +136,23 @@ p {
     .container{
         padding: 0 2rem 0 2rem;
         display: flex;
+        text-align: center;
         flex-direction: column;
         flex: 1;
     }
 
     nav{
-        padding-top: 3rem;
+        padding: 1rem 2rem 0 2rem;
     }
 
     h3 {
-        padding-top: 4rem;
+        padding-top: 0.5rem;
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 18px;
+        text-align: center;
     }
 
     .about-section{
@@ -153,15 +161,24 @@ p {
     }
 
     .self-img{
-        display: none;
+        /* display: none; */
+        width: 80%;
+        padding-left: 4rem;
+    
     }
 
+    .main-image{
+    max-width: 60%;
+    max-height: 60%;
+    border-radius: 5rem;
+
+}
+
     .self-text{
-        padding-top: 1rem;
+        padding: 0.1rem 1rem 0 1rem;
         /* text-align: center; */
         width: 100%;
     }
-
 
 }
 
