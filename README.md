@@ -1,1 +1,1 @@
-hannahdonkor-vue-exam-project.netlify.app
+https://hannahdonkor-vue-exam-project.netlify.app/
