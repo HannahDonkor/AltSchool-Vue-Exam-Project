@@ -3,7 +3,7 @@
 
             <div class="navbar">
                 <nav>
-                    <img src="src/assets/github logo.png" alt="logo" width="30" height="30">
+                    <img src="/src/assets/github_logo.png" alt="logo" width="30" height="30">
                     <span class="pix"><img src="/src/assets/for_vue.jpg" alt="my pic" width="30" height="30"></span>
                 </nav>
             </div>
