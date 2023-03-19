@@ -1,2 +1,1 @@
-# AltSchool-Vue-Exam-Project
-Fetching Api
+https://hannahdonkor-vue-exam-project.netlify.app/
